@@ -10,6 +10,11 @@
 
 set(scripts_STAT_SRCS
   ${scripts_STAT_SRCS}
+  Custom/TransmogEngine.cpp
+  Custom/TransmogEngine.h
+  Custom/TransmogHandler.cpp
+  Custom/TransmogMgr.cpp
+  Custom/TransmogMgr.h
 )
 
 message("  -> Prepared: Custom")
