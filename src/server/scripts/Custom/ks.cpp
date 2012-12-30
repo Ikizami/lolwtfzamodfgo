@@ -26,10 +26,10 @@ class KillStreak_System : public PlayerScript
 												switch( KillStreakData[KillerGUID].killstreak )
 												{
 																case 1:
-																				snprintf(message, 250, "[PVP System]: %s is on a killstreak of %u!", Killer->GetName(), KillStreakData[KillerGUID].killstreak);
+																				snprintf(message, 250, "[PVP System]: %s is on a killstreak of %u!", Killer->GetName().c_str(), KillStreakData[KillerGUID].killstreak);
 																				break;
 																case 10:
-																				snprintf(message, 250, "[PVP System]: %s is on a killstreak of %u!", Killer->GetName(), KillStreakData[KillerGUID].killstreak);
+																				snprintf(message, 250, "[PVP System]: %s is on a killstreak of %u!", Killer->GetName().c_str(), KillStreakData[KillerGUID].killstreak);
 
 																				break;
 												}
