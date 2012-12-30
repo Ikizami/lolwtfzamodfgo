@@ -1274,15 +1274,21 @@ void AddBattlegroundScripts()
 
 #ifdef SCRIPTS
 /* This is where custom scripts' loading functions should be declared. */
+
 void AddSC_transmog();
 void AddSC_StartUpTransmog();
+void AddSC_KillStreak_System();
+
 #endif
 
 void AddCustomScripts()
 {
 #ifdef SCRIPTS
     /* This is where custom scripts should be added. */
+
 AddSC_transmog();
 AddSC_StartUpTransmog();
+AddSC_KillStreak_System();
+
 #endif
 }
