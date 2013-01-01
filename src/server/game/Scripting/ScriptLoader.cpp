@@ -1277,7 +1277,8 @@ void AddBattlegroundScripts()
 
 void AddSC_transmog();
 void AddSC_StartUpTransmog();
-void AddSC_KillStreak_System();
+void AddSC_PvP_System();
+void AddSC_pvp_bt();
 
 #endif
 
@@ -1288,7 +1289,8 @@ void AddCustomScripts()
 
 AddSC_transmog();
 AddSC_StartUpTransmog();
-AddSC_KillStreak_System();
+AddSC_PvP_System();
+AddSC_pvp_bt();
 
 #endif
 }

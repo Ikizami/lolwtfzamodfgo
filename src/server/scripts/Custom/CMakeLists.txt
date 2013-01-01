@@ -16,6 +16,8 @@ set(scripts_STAT_SRCS
   Custom/TransmogMgr.cpp
   Custom/TransmogMgr.h
   Custom/ks.cpp
+  Custom/Battle_For_Halaa.cpp
+  Custom/Battle_For_Halaa.h
 )
 
 message("  -> Prepared: Custom")
