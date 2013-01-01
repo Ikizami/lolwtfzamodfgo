@@ -44,7 +44,7 @@ class System_OnKill : public PlayerScript
 		if( KillStreakData[KillerGUID].killstreak  % 10 == 0)
 		{
 			    char msg[250];
-			    snprintf(msg, 250, "[PvP System]: %s is on a killstreak of %u!", Killer->GetName(), KillStreakData[KillerGUID].killstreak);
+			    snprintf(msg, 250, "[PvP System]: %s is on a killstreak of %u!", Killer->GetName().c_str(), KillStreakData[KillerGUID].killstreak);
 				sWorld->SendServerMessage(SERVER_MSG_STRING, msg);
 		}
 
