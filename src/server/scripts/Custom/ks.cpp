@@ -51,6 +51,10 @@ class System_OnKill : public PlayerScript
 		switch( KillStreakData[KillerGUID].killstreak )
 		{
 			
+			case 1:
+				Killer->CastSpell(Killer, SPELL_SPEED, true);
+				break;
+				
 			case 50:
 				Killer->CastSpell(Killer, SPELL_SPEED, true);
 				break;
