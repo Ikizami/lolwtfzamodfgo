@@ -32,6 +32,7 @@
 #include "CreatureAI.h"
 #include "Player.h"
 #include "WorldPacket.h"
+#include "CustomVendor.h"
 
 // This is the global static registry of scripts.
 template<class TScript>
@@ -183,6 +184,10 @@ void ScriptMgr::Initialize()
     AddScripts();
 
     sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded %u C++ scripts in %u ms", GetScriptCount(), GetMSTimeDiffToNow(oldMSTime));
+
+	oldMSTime = getMSTime();
+	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "Loading custom vendors");
+	sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded %u custom vendor catageory entries in %u ms", CustomVendorMgr.LoadVendors(), GetMSTimeDiffToNow(oldMSTime));
 }
 
 void ScriptMgr::Unload()

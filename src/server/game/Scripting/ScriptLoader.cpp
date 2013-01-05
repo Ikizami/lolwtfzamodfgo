@@ -1278,7 +1278,13 @@ void AddBattlegroundScripts()
 void AddSC_transmog();
 void AddSC_StartUpTransmog();
 void AddSC_PvP_System();
-void AddSC_pvp_bt();
+void AddSC_Npc_Beastmaster();
+void AddSC_buffcommand();
+void AddSC_vipcommands();
+void AddSC_Duel_Reset();
+void AddSC_vendor_multi();
+void AddSC_vendor_general();
+
 
 #endif
 
@@ -1290,7 +1296,13 @@ void AddCustomScripts()
 AddSC_transmog();
 AddSC_StartUpTransmog();
 AddSC_PvP_System();
-AddSC_pvp_bt();
+AddSC_Npc_Beastmaster();
+AddSC_buffcommand();
+AddSC_vipcommands();
+AddSC_Duel_Reset();
+AddSC_vendor_multi();
+AddSC_vendor_general();
+
 
 #endif
 }

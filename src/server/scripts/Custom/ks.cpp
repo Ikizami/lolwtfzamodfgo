@@ -53,6 +53,9 @@ class System_OnKill : public PlayerScript
 			
 			case 1:
 				Killer->CastSpell(Killer, SPELL_SPEED, true);
+				char msg[250];
+			    	snprintf(msg, 250, "[PvP System]: %s is on a killstreak of %u!", Killer->GetName().c_str(), KillStreakData[KillerGUID].killstreak);
+				sWorld->SendServerMessage(SERVER_MSG_STRING, msg);
 				break;
 				
 			case 50:

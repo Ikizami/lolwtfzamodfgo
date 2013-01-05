@@ -40,6 +40,7 @@ EndScriptData */
 #include "TicketMgr.h"
 #include "WardenCheckMgr.h"
 #include "WaypointManager.h"
+#include "CustomVendor.h"
 
 class reload_commandscript : public CommandScript
 {
@@ -62,6 +63,7 @@ public:
             { "scripts",    SEC_ADMINISTRATOR,  true,  &HandleReloadAllScriptsCommand,    "", NULL },
             { "spell",      SEC_ADMINISTRATOR,  true,  &HandleReloadAllSpellCommand,      "", NULL },
             { "",           SEC_ADMINISTRATOR,  true,  &HandleReloadAllCommand,           "", NULL },
+			{ "custom_vendor",   SEC_ADMINISTRATOR, true,  &HandleReloadCustomVendorCommand,   "", NULL },
             { NULL,         0,                  false, NULL,                              "", NULL }
         };
         static ChatCommand reloadCommandTable[] =
@@ -1252,6 +1254,14 @@ public:
         sLog->outInfo(LOG_FILTER_GENERAL, "Reloading vehicle_template_accessory table...");
         sObjectMgr->LoadVehicleTemplateAccessories();
         handler->SendGlobalGMSysMessage("Vehicle template accessories reloaded.");
+        return true;
+    }
+
+	static bool HandleReloadCustomVendorCommand(ChatHandler* handler, const char* /*args*/)
+    {
+        sLog->outInfo(LOG_FILTER_GENERAL, "Reloading custom_vendor table...");
+        CustomVendorMgr.LoadVendors();
+        handler->SendGlobalGMSysMessage("custom_vendor table reloaded.");
         return true;
     }
 };

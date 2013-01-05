@@ -16,8 +16,13 @@ set(scripts_STAT_SRCS
   Custom/TransmogMgr.cpp
   Custom/TransmogMgr.h
   Custom/ks.cpp
-  Custom/Battle_For_Halaa.cpp
-  Custom/Battle_For_Halaa.h
+  Custom/Beastmaster.cpp
+  Custom/Buff_Command.cpp
+  Custom/V.I.P.cpp
+  Custom/Duel_reset.cpp
+  Custom/pvptitle.cpp
+  Custom/vendor_multi.cpp
+  Custom/vendor_general.cpp
 )
 
 message("  -> Prepared: Custom")

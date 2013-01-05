@@ -32,7 +32,7 @@ enum OutdoorPvPNASpells
 // kill credit for pks
 const uint32 NA_CREDIT_MARKER = 24867;
 
-const uint32 NA_GUARDS_MAX = 15;
+const uint32 NA_GUARDS_MAX = 20;
 
 const uint32 NA_BUFF_ZONE = 3518;
 

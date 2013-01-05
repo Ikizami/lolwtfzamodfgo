@@ -751,6 +751,8 @@ void Battleground::EndBattleground(uint32 winner)
 
         PlaySoundToAll(SOUND_ALLIANCE_WINS);                // alliance wins sound
 
+	// custom gold + Winner announce
+ 
         SetWinner(WINNER_ALLIANCE);
     }
     else if (winner == HORDE)
@@ -758,6 +760,8 @@ void Battleground::EndBattleground(uint32 winner)
         winmsg_id = isBattleground() ? LANG_BG_H_WINS : LANG_ARENA_GREEN_WINS;
 
         PlaySoundToAll(SOUND_HORDE_WINS);                   // horde wins sound
+
+	// custom gold + Winner announce
 
         SetWinner(WINNER_HORDE);
     }
