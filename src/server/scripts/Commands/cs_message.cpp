@@ -48,13 +48,13 @@ public:
         static ChatCommand commandTable[] =
         {
             { "channel",        SEC_ADMINISTRATOR,  true,   NULL,                               "", channelCommandTable  },
-            { "nameannounce",   SEC_MODERATOR,      true,   &HandleNameAnnounceCommand,         "", NULL },
-            { "gmnameannounce", SEC_MODERATOR,      true,   &HandleGMNameAnnounceCommand,       "", NULL },
-            { "announce",       SEC_MODERATOR,      true,   &HandleAnnounceCommand,             "", NULL },
-            { "gmannounce",     SEC_MODERATOR,      true,   &HandleGMAnnounceCommand,           "", NULL },
-            { "notify",         SEC_MODERATOR,      true,   &HandleNotifyCommand,               "", NULL },
-            { "gmnotify",       SEC_MODERATOR,      true,   &HandleGMNotifyCommand,             "", NULL },
-            { "whispers",       SEC_MODERATOR,      false,  &HandleWhispersCommand,             "", NULL },
+            { "nameannounce",   SEC_EVENT_MASTER,      true,   &HandleNameAnnounceCommand,         "", NULL },
+            { "gmnameannounce", SEC_EVENT_MASTER,      true,   &HandleGMNameAnnounceCommand,       "", NULL },
+            { "announce",       SEC_EVENT_MASTER,      true,   &HandleAnnounceCommand,             "", NULL },
+            { "gmannounce",     SEC_EVENT_MASTER,      true,   &HandleGMAnnounceCommand,           "", NULL },
+            { "notify",         SEC_EVENT_MASTER,      true,   &HandleNotifyCommand,               "", NULL },
+            { "gmnotify",       SEC_EVENT_MASTER,      true,   &HandleGMNotifyCommand,             "", NULL },
+            { "whispers",       SEC_EVENT_MASTER,      false,  &HandleWhispersCommand,             "", NULL },
             { NULL,             0,                  false,  NULL,                               "", NULL }
         };
         return commandTable;

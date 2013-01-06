@@ -285,7 +285,7 @@ bool IsPlayerAccount(uint32 gmlevel)
 
 bool IsModeratorAccount(uint32 gmlevel)
 {
-    return gmlevel >= SEC_MODERATOR && gmlevel <= SEC_CONSOLE;
+    return gmlevel >= SEC_EVENT_MASTER && gmlevel <= SEC_CONSOLE;
 }
 
 bool IsGMAccount(uint32 gmlevel)

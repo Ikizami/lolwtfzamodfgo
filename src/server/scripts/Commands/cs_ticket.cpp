@@ -40,33 +40,33 @@ public:
     {
         static ChatCommand ticketResponseCommandTable[] =
         {
-            { "append",         SEC_MODERATOR,      true,  &HandleGMTicketResponseAppendCommand,    "", NULL },
-            { "appendln",       SEC_MODERATOR,      true,  &HandleGMTicketResponseAppendLnCommand,  "", NULL },
+            { "append",         SEC_EVENT_MASTER,      true,  &HandleGMTicketResponseAppendCommand,    "", NULL },
+            { "appendln",       SEC_EVENT_MASTER,      true,  &HandleGMTicketResponseAppendLnCommand,  "", NULL },
             { NULL,             0,                  false, NULL,                                    "", NULL }
         };
         static ChatCommand ticketCommandTable[] =
         {
             { "assign",         SEC_GAMEMASTER,     true,  &HandleGMTicketAssignToCommand,          "", NULL },
-            { "close",          SEC_MODERATOR,      true,  &HandleGMTicketCloseByIdCommand,         "", NULL },
-            { "closedlist",     SEC_MODERATOR,      true,  &HandleGMTicketListClosedCommand,        "", NULL },
-            { "comment",        SEC_MODERATOR,      true,  &HandleGMTicketCommentCommand,           "", NULL },
-            { "complete",       SEC_MODERATOR,      true,  &HandleGMTicketCompleteCommand,          "", NULL },
+            { "close",          SEC_EVENT_MASTER,      true,  &HandleGMTicketCloseByIdCommand,         "", NULL },
+            { "closedlist",     SEC_EVENT_MASTER,      true,  &HandleGMTicketListClosedCommand,        "", NULL },
+            { "comment",        SEC_EVENT_MASTER,      true,  &HandleGMTicketCommentCommand,           "", NULL },
+            { "complete",       SEC_EVENT_MASTER,      true,  &HandleGMTicketCompleteCommand,          "", NULL },
             { "delete",         SEC_ADMINISTRATOR,  true,  &HandleGMTicketDeleteByIdCommand,        "", NULL },
-            { "escalate",       SEC_MODERATOR,      true,  &HandleGMTicketEscalateCommand,          "", NULL },
+            { "escalate",       SEC_EVENT_MASTER,      true,  &HandleGMTicketEscalateCommand,          "", NULL },
             { "escalatedlist",  SEC_GAMEMASTER,     true,  &HandleGMTicketListEscalatedCommand,     "", NULL },
-            { "list",           SEC_MODERATOR,      true,  &HandleGMTicketListCommand,              "", NULL },
-            { "onlinelist",     SEC_MODERATOR,      true,  &HandleGMTicketListOnlineCommand,        "", NULL },
+            { "list",           SEC_EVENT_MASTER,      true,  &HandleGMTicketListCommand,              "", NULL },
+            { "onlinelist",     SEC_EVENT_MASTER,      true,  &HandleGMTicketListOnlineCommand,        "", NULL },
             { "reset",          SEC_ADMINISTRATOR,  true,  &HandleGMTicketResetCommand,             "", NULL },
-            { "response",       SEC_MODERATOR,      true,  NULL,                                    "", ticketResponseCommandTable },
+            { "response",       SEC_EVENT_MASTER,      true,  NULL,                                    "", ticketResponseCommandTable },
             { "togglesystem",   SEC_ADMINISTRATOR,  true,  &HandleToggleGMTicketSystem,             "", NULL },
             { "unassign",       SEC_GAMEMASTER,     true,  &HandleGMTicketUnAssignCommand,          "", NULL },
-            { "viewid",         SEC_MODERATOR,      true,  &HandleGMTicketGetByIdCommand,           "", NULL },
-            { "viewname",       SEC_MODERATOR,      true,  &HandleGMTicketGetByNameCommand,         "", NULL },
+            { "viewid",         SEC_EVENT_MASTER,      true,  &HandleGMTicketGetByIdCommand,           "", NULL },
+            { "viewname",       SEC_EVENT_MASTER,      true,  &HandleGMTicketGetByNameCommand,         "", NULL },
             { NULL,             0,                  false, NULL,                                    "", NULL }
         };
         static ChatCommand commandTable[] =
         {
-            { "ticket",         SEC_MODERATOR,      false, NULL,                                    "", ticketCommandTable },
+            { "ticket",         SEC_EVENT_MASTER,      false, NULL,                                    "", ticketCommandTable },
             { NULL,             0,                  false, NULL,                                    "", NULL }
         };
         return commandTable;

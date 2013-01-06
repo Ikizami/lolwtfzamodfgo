@@ -39,22 +39,22 @@ public:
     {
         static ChatCommand goCommandTable[] =
         {
-            { "creature",       SEC_MODERATOR,      false, &HandleGoCreatureCommand,          "", NULL },
-            { "graveyard",      SEC_MODERATOR,      false, &HandleGoGraveyardCommand,         "", NULL },
-            { "grid",           SEC_MODERATOR,      false, &HandleGoGridCommand,              "", NULL },
-            { "object",         SEC_MODERATOR,      false, &HandleGoObjectCommand,            "", NULL },
-            { "taxinode",       SEC_MODERATOR,      false, &HandleGoTaxinodeCommand,          "", NULL },
-            { "trigger",        SEC_MODERATOR,      false, &HandleGoTriggerCommand,           "", NULL },
-            { "zonexy",         SEC_MODERATOR,      false, &HandleGoZoneXYCommand,            "", NULL },
-            { "xyz",            SEC_MODERATOR,      false, &HandleGoXYZCommand,               "", NULL },
-            { "ticket",         SEC_MODERATOR,      false, &HandleGoTicketCommand,            "", NULL },
-            { "",               SEC_MODERATOR,      false, &HandleGoXYZCommand,               "", NULL },
+            { "creature",       SEC_EVENT_MASTER,      false, &HandleGoCreatureCommand,          "", NULL },
+            { "graveyard",      SEC_EVENT_MASTER,      false, &HandleGoGraveyardCommand,         "", NULL },
+            { "grid",           SEC_EVENT_MASTER,      false, &HandleGoGridCommand,              "", NULL },
+            { "object",         SEC_EVENT_MASTER,      false, &HandleGoObjectCommand,            "", NULL },
+            { "taxinode",       SEC_EVENT_MASTER,      false, &HandleGoTaxinodeCommand,          "", NULL },
+            { "trigger",        SEC_EVENT_MASTER,      false, &HandleGoTriggerCommand,           "", NULL },
+            { "zonexy",         SEC_EVENT_MASTER,      false, &HandleGoZoneXYCommand,            "", NULL },
+            { "xyz",            SEC_EVENT_MASTER,      false, &HandleGoXYZCommand,               "", NULL },
+            { "ticket",         SEC_EVENT_MASTER,      false, &HandleGoTicketCommand,            "", NULL },
+            { "",               SEC_EVENT_MASTER,      false, &HandleGoXYZCommand,               "", NULL },
             { NULL,             0,                  false, NULL,                              "", NULL }
         };
 
         static ChatCommand commandTable[] =
         {
-            { "go",             SEC_MODERATOR,      false, NULL,                     "", goCommandTable },
+            { "go",             SEC_EVENT_MASTER,      false, NULL,                     "", goCommandTable },
             { NULL,             0,                  false, NULL,                               "", NULL }
         };
         return commandTable;
