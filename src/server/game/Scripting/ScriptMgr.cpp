@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -32,7 +32,6 @@
 #include "CreatureAI.h"
 #include "Player.h"
 #include "WorldPacket.h"
-#include "CustomVendor.h"
 
 // This is the global static registry of scripts.
 template<class TScript>
@@ -184,10 +183,6 @@ void ScriptMgr::Initialize()
     AddScripts();
 
     sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded %u C++ scripts in %u ms", GetScriptCount(), GetMSTimeDiffToNow(oldMSTime));
-
-	oldMSTime = getMSTime();
-	sLog->outInfo(LOG_FILTER_SERVER_LOADING, "Loading custom vendors");
-	sLog->outInfo(LOG_FILTER_SERVER_LOADING, ">> Loaded %u custom vendor catageory entries in %u ms", CustomVendorMgr.LoadVendors(), GetMSTimeDiffToNow(oldMSTime));
 }
 
 void ScriptMgr::Unload()
@@ -1244,6 +1239,11 @@ void ScriptMgr::OnPlayerCreate(Player* player)
 void ScriptMgr::OnPlayerDelete(uint64 guid)
 {
     FOREACH_SCRIPT(PlayerScript)->OnDelete(guid);
+}
+
+void ScriptMgr::OnPlayerSave(Player* player)
+{
+    FOREACH_SCRIPT(PlayerScript)->OnSave(player);
 }
 
 void ScriptMgr::OnPlayerBindToInstance(Player* player, Difficulty difficulty, uint32 mapid, bool permanent)

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -1062,15 +1062,11 @@ class Player : public Unit, public GridObject<Player>
     friend void Item::AddToUpdateQueueOf(Player* player);
     friend void Item::RemoveFromUpdateQueueOf(Player* player);
     public:
- 	int currentVendorEntry;
         explicit Player (WorldSession* session);
         ~Player();
 
-	public:
-		uint32 selectedSlotID;
-		Loot* selectedInterface;
-
         void CleanupsBeforeDelete(bool finalCleanup = true);
+		int32 vendorentry;
 
         void AddToWorld();
         void RemoveFromWorld();

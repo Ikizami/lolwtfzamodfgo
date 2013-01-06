@@ -1,4 +1,4 @@
-# Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
+# Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
 #
 # This file is free software; as a special exception the author gives
 # unlimited permission to copy and/or distribute it, with or without
@@ -10,19 +10,6 @@
 
 set(scripts_STAT_SRCS
   ${scripts_STAT_SRCS}
-  Custom/TransmogEngine.cpp
-  Custom/TransmogEngine.h
-  Custom/TransmogHandler.cpp
-  Custom/TransmogMgr.cpp
-  Custom/TransmogMgr.h
-  Custom/ks.cpp
-  Custom/Beastmaster.cpp
-  Custom/Buff_Command.cpp
-  Custom/V.I.P.cpp
-  Custom/Duel_reset.cpp
-  Custom/pvptitle.cpp
-  Custom/vendor_multi.cpp
-  Custom/vendor_general.cpp
 )
 
 message("  -> Prepared: Custom")

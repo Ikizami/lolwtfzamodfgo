@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -751,8 +751,6 @@ void Battleground::EndBattleground(uint32 winner)
 
         PlaySoundToAll(SOUND_ALLIANCE_WINS);                // alliance wins sound
 
-	// custom gold + Winner announce
- 
         SetWinner(WINNER_ALLIANCE);
     }
     else if (winner == HORDE)
@@ -760,8 +758,6 @@ void Battleground::EndBattleground(uint32 winner)
         winmsg_id = isBattleground() ? LANG_BG_H_WINS : LANG_ARENA_GREEN_WINS;
 
         PlaySoundToAll(SOUND_HORDE_WINS);                   // horde wins sound
-
-	// custom gold + Winner announce
 
         SetWinner(WINNER_HORDE);
     }

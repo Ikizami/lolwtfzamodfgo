@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
  * Copyright (C) 2005-2009 MaNGOS <http://getmangos.com/>
  *
  * This program is free software; you can redistribute it and/or modify it
@@ -30,7 +30,6 @@
 #include "World.h"
 #include "WorldPacket.h"
 #include "WorldSession.h"
-#include "TransmogEngine.h"
 
 void WorldSession::HandleAutostoreLootItemOpcode(WorldPacket& recvData)
 {
@@ -41,14 +40,6 @@ void WorldSession::HandleAutostoreLootItemOpcode(WorldPacket& recvData)
     uint8 lootSlot = 0;
 
     recvData >> lootSlot;
-	
-	if(TransmogEngine::IsActiveInterface(lguid) && player)
-	{
-		if(Creature* creature = player->GetMap()->GetCreature(lguid))
-			TransmogEngine::HandleInterfaceSelect(player, creature, player->selectedInterface, lootSlot);
-			
-		return;
-	}
 
     if (IS_GAMEOBJECT_GUID(lguid))
     {
@@ -250,15 +241,6 @@ void WorldSession::HandleLootReleaseOpcode(WorldPacket& recvData)
     // use internal stored guid
     uint64 guid;
     recvData >> guid;
-
-	if(Player* player = GetPlayer())
-	if(TransmogEngine::IsActiveInterface(guid))
-	{
-		if(Creature* creature = GetPlayer()->GetMap()->GetCreature(guid))
-			TransmogEngine::SendInterfaceClose(player, guid);
-			
-			return;
-	}
 
     if (uint64 lguid = GetPlayer()->GetLootGUID())
         if (lguid == guid)

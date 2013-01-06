@@ -1,4 +1,0 @@
-/home/historic/server/bin/authserver
-/home/historic/server/etc/authserver.conf.dist
-/home/historic/server/bin/worldserver
-/home/historic/server/etc/worldserver.conf.dist

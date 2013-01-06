@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2008-2012 TrinityCore <http://www.trinitycore.org/>
+ * Copyright (C) 2008-2013 TrinityCore <http://www.trinitycore.org/>
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
@@ -32,7 +32,7 @@ enum OutdoorPvPNASpells
 // kill credit for pks
 const uint32 NA_CREDIT_MARKER = 24867;
 
-const uint32 NA_GUARDS_MAX = 20;
+const uint32 NA_GUARDS_MAX = 15;
 
 const uint32 NA_BUFF_ZONE = 3518;
 
