@@ -1285,6 +1285,7 @@ void AddBattlegroundScripts()
 			void AddSC_transmog();
 			void AddSC_StartUpTransmog();
 			void AddSC_chat();
+			void AddSC_Professions_NPC();
 
 #endif
 
@@ -1296,6 +1297,7 @@ void AddCustomScripts()
 	AddSC_transmog();
 	AddSC_StartUpTransmog();
 	AddSC_chat();
+	AddSC_Professions_NPC();
 
 #endif
 }
