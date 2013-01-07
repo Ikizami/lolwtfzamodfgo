@@ -2,7 +2,7 @@
 #include <cstring>
 #include "GuildMgr.h"
 
-const uint32 GUILD_TOKEN = 30;
+const uint32 GUILD_TOKEN = 67000;
 bool requiresGUpdate = true;
 std::vector<uint64> GuildHouses;
 char string[200];

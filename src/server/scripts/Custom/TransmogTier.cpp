@@ -19,8 +19,7 @@ class TransmogTier : public CreatureScript
 			pPlayer->ADD_GOSSIP_ITEM(4, "|cff00ff00|TInterface\\icons\\spell_holy_proclaimchampion:24|t|r Tier 7", GOSSIP_SENDER_MAIN, 7);
 			pPlayer->ADD_GOSSIP_ITEM(4, "|cff00ff00|TInterface\\icons\\spell_holy_proclaimchampion:24|t|r Tier 8", GOSSIP_SENDER_MAIN, 8);
 			pPlayer->ADD_GOSSIP_ITEM(4, "|cff00ff00|TInterface\\icons\\spell_holy_proclaimchampion:24|t|r Tier 9", GOSSIP_SENDER_MAIN, 9);
-			pPlayer->ADD_GOSSIP_ITEM(4, "|cff00ff00|TInterface\\icons\\spell_holy_proclaimchampion:24|t|r Tier 10", GOSSIP_SENDER_MAIN, 10);
-			pPlayer->PlayerTalkClass->SendGossipMenu(9425, pCreature->GetGUID());
+			pPlayer->PlayerTalkClass->SendGossipMenu(1, pCreature->GetGUID());
 			return true;
 		}
 
@@ -33,67 +32,68 @@ class TransmogTier : public CreatureScript
 			Player->vendorentry = -1;
 			switch(uiAction)
 			{
-				case 1:
+				case 1: // Tier 1
 					{
-						Player->vendorentry = 500141;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500141);
+						Player->vendorentry = 100004;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100004);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 
-				case 2:
+				case 2: // Tier 2
 					{
-						Player->vendorentry = 500141;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500141);
-						Player->PlayerTalkClass->SendCloseGossip();
-					}break;
-
-
-				case 3:
-					{
-						Player->vendorentry = 500141;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500141);
+						Player->vendorentry = 100005;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100005);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 
 
-				case 4:
+				case 3:  // Tier 3
 					{
-						Player->vendorentry = 500141;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500141);
+						Player->vendorentry = 100006;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100006);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 
-				case 5:
+
+				case 4:  // tier 4
 					{
-						Player->vendorentry = 500142;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500142);
-						Player->PlayerTalkClass->SendCloseGossip();
-					}break;
-				case 6:
-					{
-						Player->vendorentry = 500142;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500142);
+						Player->vendorentry = 100007;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100007);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 
-				case 7:
+				case 5:  // tier 5
 					{
-						Player->vendorentry = 500142;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500142);
+						Player->vendorentry = 100008;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100008);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 
-				case 8:
+				case 6:  // tier 6
 					{
-						Player->vendorentry = 500139;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500139);
+						Player->vendorentry = 100009;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100009);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 
-				case 9:
+				case 7: // tier 7
 					{
-						Player->vendorentry = 500142;
-						m_session->SendCustomListInventory(Creature->GetGUID(), 500142);
+						Player->vendorentry = 100010;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100010);
+						Player->PlayerTalkClass->SendCloseGossip();
+					}break;
+
+				case 8:  // tier 8
+					{
+						Player->vendorentry = 100011;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100011);
+						Player->PlayerTalkClass->SendCloseGossip();
+					}break;
+
+				case 9:  // tier 9
+					{
+						Player->vendorentry = 100012;
+						m_session->SendCustomListInventory(Creature->GetGUID(), 100012);
 						Player->PlayerTalkClass->SendCloseGossip();
 					}break;
 

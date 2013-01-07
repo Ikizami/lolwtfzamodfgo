@@ -1284,6 +1284,7 @@ void AddBattlegroundScripts()
 /* This is where custom scripts' loading functions should be declared. */
 			void AddSC_transmog();
 			void AddSC_StartUpTransmog();
+			void AddSC_TransmogTier();
 			void AddSC_chat();
 			void AddSC_Professions_NPC();
 			void AddSC_GuildHouse();
@@ -1297,6 +1298,7 @@ void AddCustomScripts()
 	AddSC_VendorScript();
 	AddSC_transmog();
 	AddSC_StartUpTransmog();
+	AddSC_TransmogTier();
 	AddSC_chat();
 	AddSC_Professions_NPC();
 	AddSC_GuildHouse();
