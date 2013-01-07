@@ -1286,6 +1286,7 @@ void AddBattlegroundScripts()
 			void AddSC_StartUpTransmog();
 			void AddSC_chat();
 			void AddSC_Professions_NPC();
+			void AddSC_GuildHouse();
 
 #endif
 
@@ -1298,6 +1299,7 @@ void AddCustomScripts()
 	AddSC_StartUpTransmog();
 	AddSC_chat();
 	AddSC_Professions_NPC();
+	AddSC_GuildHouse();
 
 #endif
 }

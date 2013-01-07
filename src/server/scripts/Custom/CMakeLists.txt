@@ -18,6 +18,7 @@ set(scripts_STAT_SRCS
   Custom/TransmogMgr.cpp
   Custom/TransmogMgr.h
   Custom/proff.cpp
+  Custom/GuildHousing.cpp
 )
 
 message("  -> Prepared: Custom")
